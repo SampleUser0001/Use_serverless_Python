@@ -1,0 +1,2 @@
+# Use_serverless_Python
+serverlessを使ってみる
