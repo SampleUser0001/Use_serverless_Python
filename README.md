@@ -16,9 +16,10 @@ sls deploy -v
 ## 実行
 
 ``` bash
-function_name=hello
+# 関数名serverless.yml-functionsの下に紐付いている値を設定する。
+function_name=hoge
 input_filepath=event.json
-sls invoke --function ${function_name} -p ${inputfilepath}
+sls invoke --function ${function_name} -p ${input_filepath}
 ```
 
 ## 削除

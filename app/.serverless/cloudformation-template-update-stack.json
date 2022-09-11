@@ -71,10 +71,10 @@
         }
       }
     },
-    "HelloLogGroup": {
+    "HogeLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/Use-serverless-Python-dev-hello"
+        "LogGroupName": "/aws/lambda/Use-serverless-Python-dev-hoge"
       }
     },
     "IamRoleLambdaExecution": {
@@ -154,18 +154,18 @@
         }
       }
     },
-    "HelloLambdaFunction": {
+    "HogeLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/Use-serverless-Python/dev/1662890886817-2022-09-11T10:08:06.817Z/Use-serverless-Python.zip"
+          "S3Key": "serverless/Use-serverless-Python/dev/1662891984426-2022-09-11T10:26:24.426Z/Use-serverless-Python.zip"
         },
         "Handler": "handler.hello",
         "Runtime": "python3.8",
-        "FunctionName": "Use-serverless-Python-dev-hello",
+        "FunctionName": "Use-serverless-Python-dev-hoge",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -176,15 +176,15 @@
         }
       },
       "DependsOn": [
-        "HelloLogGroup"
+        "HogeLogGroup"
       ]
     },
-    "HelloLambdaVersionQpHeyI9GfwYCDaoQ7t5g4TJ4EEpITD9L3eu8YaYy4": {
+    "HogeLambdaVersionW44CgqpkNTpPQa4ehd4n1znUC2b4HoSGlkPfexcyg8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "HelloLambdaFunction"
+          "Ref": "HogeLambdaFunction"
         },
         "CodeSha256": "7ynLp0vrABHKPZAkSBefkHwhsfv7PBg7G28Q0dq2YIU="
       }
@@ -199,13 +199,13 @@
         "Name": "sls-Use-serverless-Python-dev-ServerlessDeploymentBucketName"
       }
     },
-    "HelloLambdaFunctionQualifiedArn": {
+    "HogeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionQpHeyI9GfwYCDaoQ7t5g4TJ4EEpITD9L3eu8YaYy4"
+        "Ref": "HogeLambdaVersionW44CgqpkNTpPQa4ehd4n1znUC2b4HoSGlkPfexcyg8"
       },
       "Export": {
-        "Name": "sls-Use-serverless-Python-dev-HelloLambdaFunctionQualifiedArn"
+        "Name": "sls-Use-serverless-Python-dev-HogeLambdaFunctionQualifiedArn"
       }
     }
   }
